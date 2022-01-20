@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary-cyan: hsl(171, 66%, 44%);
+  --clr-primary-blue: hsl(233, 100%, 69%);
+
+  --clr-secondary-dark-blue: hsl(210, 10%, 33%);
+  --clr-secondary-grayish-blue: hsl(201, 11%, 66%);
+
+  --ff-primary: "Bai Jamjuree", sans-serif;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
