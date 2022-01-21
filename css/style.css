@@ -8,7 +8,7 @@
 
 :root {
   --clr-primary-cyan: hsl(171, 66%, 44%);
-  --clr-primary-blue: hsl(233, 100%, 69%);
+  --clr-primary-blue: rgb(97, 115, 255);
 
   --clr-secondary-dark-blue: hsl(210, 10%, 33%);
   --clr-secondary-grayish-blue: hsl(201, 11%, 66%);
@@ -19,7 +19,21 @@
 body {
   font-family: var(--ff-primary);
   font-size: 1.125rem;
+  text-align: center;
   font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: var(--clr-secondary-dark-blue);
+}
+
+p {
+  font-size: 0.93em;
+  font-weight: 400;
+  color: var(--clr-secondary-grayish-blue);
 }
 
 img {
@@ -33,4 +47,357 @@ ul[class] {
 
 a {
   text-decoration: none;
+}
+
+section {
+  padding: 4em 0;
+}
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+/* header */
+
+.header {
+  background-image: url(/images/bg-header-mobile.png);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  margin: 3.5em auto;
+}
+
+.header-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.header-text,
+.snippet-text,
+.clipboard-text,
+.workflow-text,
+.apple-text {
+  line-height: 1.5;
+  margin-bottom: 3em;
+}
+
+.btn {
+  padding: 0.9em 4em;
+  border-radius: 100px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1.3em;
+  display: inline-block;
+}
+
+.btn-green {
+  background-color: var(--clr-primary-cyan);
+  box-shadow: 0px 4px 8px 2px rgba(38, 186, 164, 0.3);
+}
+
+.btn-blue {
+  background-color: var(--clr-primary-blue);
+  box-shadow: 0px 5px 7px 2px rgba(97, 115, 255, 0.2);
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.7;
+}
+
+/* snippets */
+
+.snippet-container {
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+.snippet-title,
+.clipboard-title,
+.workflow-title,
+.apple-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.7em;
+}
+
+.mac-img {
+  padding: 1.1em 0;
+}
+
+.feature-title,
+.tool-title {
+  margin-top: 1.5em;
+  font-size: 1.5rem;
+}
+
+.feature-text,
+.tool-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-top: 0.8em;
+}
+
+.tool,
+.comp-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+}
+
+.comp-logo img {
+  padding-bottom: 3em;
+  padding-top: 0;
+}
+
+footer {
+  background-color: #f5f6f8;
+  padding: 2em 0;
+}
+
+.footer-logo {
+  width: 3rem;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+.content-item {
+  padding: 0.7em 0;
+}
+
+.content-link {
+  color: var(--clr-secondary-dark-blue);
+  font-weight: 600;
+}
+
+.social-media {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2em;
+}
+
+.content-link:hover,
+.content-link:focus {
+  color: var(--clr-primary-cyan);
+}
+
+.social-media img:hover,
+.social-media img:focus {
+  filter: invert(0.4) sepia(1) saturate(9.4) hue-rotate(115.2deg)
+    brightness(0.95);
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    max-width: 550px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    max-width: 750px;
+  }
+
+  .header {
+    background-image: url(/images/bg-header-desktop.png);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .btn-green {
+    margin-right: 1em;
+  }
+
+  .mac-img {
+    width: 30em;
+    margin: 0 auto;
+  }
+
+  .features-list,
+  .tool {
+    padding: 2em 8em;
+  }
+
+  .header-title {
+    font-size: 2.5rem;
+  }
+
+  .header-text,
+  .snippet-text,
+  .clipboard-text,
+  .workflow-text,
+  .apple-text {
+    font-size: 1.3rem;
+  }
+
+  .snippet-title,
+  .clipboard-title,
+  .workflow-title,
+  .apple-title {
+    font-size: 2.2rem;
+  }
+
+  .feature-title,
+  .tool-title {
+    font-size: 1.8rem;
+  }
+
+  .feature-text,
+  .tool-text {
+    font-size: 1.4rem;
+  }
+
+  .snippet-text {
+    padding: 0 5em;
+  }
+
+  .comp-logo {
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-bottom: 0;
+  }
+
+  .content-link {
+    font-size: 1.3rem;
+  }
+
+  .social-media {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1250px;
+  }
+
+  .header-title {
+    font-size: 3rem;
+  }
+
+  .header-text,
+  .snippet-text {
+    padding: 0 11em;
+  }
+
+  .snippets-features {
+    display: flex;
+  }
+
+  .mac-img {
+    flex: 2;
+  }
+
+  .mac-img img {
+    margin-top: 5em;
+    margin-left: -3em;
+  }
+
+  .features-list {
+    align-self: center;
+    padding-left: 3em;
+    text-align: left;
+    flex: 1;
+  }
+
+  .feature-text {
+    font-size: 1rem;
+  }
+
+  .clipboard-text {
+    padding: 0 9em;
+  }
+
+  .clipboard-img img {
+    margin: 0 auto;
+  }
+
+  .workflow-tools {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tool {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-h {
+    height: 32px;
+  }
+
+  .tool-title {
+    font-size: 1.5rem;
+  }
+
+  .tool-text {
+    font-size: 1.15rem;
+    padding: 0 1em;
+  }
+
+  .comp-logo {
+    padding: 0;
+    flex-wrap: nowrap;
+  }
+
+  .apple-text {
+    padding: 0 9em;
+  }
+
+  footer {
+    padding: 2em 0;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .content-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 5em;
+    width: 70%;
+  }
+
+  .content-item {
+    margin-right: 4em;
+  }
+
+  .content-item:nth-child(2) {
+    margin-left: 2em;
+  }
+
+  .social-media {
+    width: 20%;
+    margin-right: 0;
+    padding-top: 0;
+    justify-content: center;
+  }
+
+  .social-media img {
+    margin-right: 2em;
+  }
 }
